@@ -45,10 +45,10 @@ body{ background:#fff; font-size:12px; font-family:"宋体";}
 .indexMainCen{ float:left; width:556px; margin:0 0 31px 34px;}
 .aboutUsCon{ margin-top:15px; background:url(../images/aboutUsBg.jpg) no-repeat; height:143px; width:399px; padding-left:148px; line-height:22px; text-indent:2em;}
 .products{ margin-top:16px;}
-.productsCon{ margin-top:19px; width:540px; overflow:hidden;}
-.productsCon ul{ width:1000px;}
-.productsCon li{ float:left; width:127px; line-height:26px; text-align:center; margin:0 7px 0 14px;}
-.productsCon li img{ border:#d3d3d3 1px solid;}
+#productsCon{ margin-top:19px; width:540px; overflow:hidden;}
+#productsCon ul{ width:1000%; padding-left: 7px;}
+#productsCon li{ float:left; width:127px; line-height:26px; text-align:center; margin-right:21px;}
+#productsCon li img{ border:#d3d3d3 1px solid;}
 /*主要内容-右边*/
 .indexMainRight{ float:right; width:199px;}
 .indexMainRight img{ border:#dadada 1px solid; margin:10px 1px 0 0;}

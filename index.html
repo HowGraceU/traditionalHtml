@@ -61,17 +61,17 @@
         <div class="products">
         	<h3>产品简介<b>PRODUCES</b><a href="produce.html" style="right:6px;">更多>></a></h3>
             <span class="redLine" style="width:160px;">红分割线</span><span class="grayLine" style="width:396px;">灰分割线</span>
-            <div class="productsCon">
+            <div id="productsCon">
             	<ul class="clearfix">
-                	<li><a href=""><img src="images/products.jpg" /><span>产品电器F0000001号</span></a></li>
-                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000001号</span></a></li>
-                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000001号</span></a></li>
-                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000001号</span></a></li>
-                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000001号</span></a></li>
-                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000001号</span></a></li>
+                	<li style="margin-right: 21px;"><a href=""><img src="images/products.jpg" /><span>产品电器F0000001号</span></a></li>
+                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000002号</span></a></li>
+                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000003号</span></a></li>
+                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000004号</span></a></li>
+                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000005号</span></a></li>
+                    <li><a href=""><img src="images/products.jpg" /><span>产品电器F0000006号</span></a></li>
                 </ul>
             </div>
-        </div> 
+        </div>
     </div>
     <div class="indexMainRight">
     	<h3>行业资讯<b>NEWS</b><a href="news.html" style="right:6px;">更多>></a></h3>
@@ -92,5 +92,36 @@
 	<span>COPYright(C)江西省大余县XXXX有限公司 电话：0797-8738088x<<br />
 技术支持：xxx网络 赣ICP备1XXXXXX7号</span>
 </div>
+<script type="text/javascript">
+	var myDiv=document.getElementById("productsCon"),
+	myUl=myDiv.getElementsByTagName("ul")[0],
+	mylis=myUl.getElementsByTagName('li'),
+  timer=null,
+  width=0;
+
+  function move() {
+    width-=2;
+    mylis[0].style.marginLeft = width + 'px';
+    if (width%148 === 0) {
+      width = 0;
+      myUl.appendChild(mylis[0]);
+      mylis[mylis.length-1].style.marginLeft = 0 + 'px';
+    }
+
+    timer=setTimeout(function(){
+      move();
+    },10);
+  }
+
+  move();
+
+  myUl.onmouseenter=function(){
+    clearTimeout(timer);
+  }
+
+  myUl.onmouseleave=function(){
+    move();
+  }
+</script>
 </body>
 </html>
